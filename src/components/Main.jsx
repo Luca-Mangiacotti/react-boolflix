@@ -18,6 +18,10 @@ export default function Main() {
               {movie.title && (
                 <div>
                   <h4>Titolo Film: {movie.title}</h4>
+                  <img
+                    src={`http://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                    alt={movie.original_name}
+                  />
                   <p>Titolo originale: {movie.original_title}</p>
                   <div className="movie-info-field">
                     <p>Lingua: </p>
@@ -42,6 +46,10 @@ export default function Main() {
               {serie.name && (
                 <div>
                   <h4>Titolo Serie Tv: {serie.name}</h4>
+                  <img
+                    src={`http://image.tmdb.org/t/p/w200${serie.poster_path}`}
+                    alt={serie.original_name}
+                  />
                   <p>Titolo originale: {serie.original_name}</p>
                   <div className="movie-info-field">
                     <p>Lingua: </p>
@@ -51,6 +59,7 @@ export default function Main() {
                       alt={serie.original_language}
                     />
                   </div>
+
                   <div className="movie-info-field">
                     Voto:
                     <div>{StarsVote(Math.trunc(serie.vote_average / 2))}</div>
