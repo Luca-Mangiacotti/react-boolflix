@@ -9,7 +9,7 @@ export default function SearchBar() {
   const [search, setSearch] = useState("");
 
   //destrutturazione della setter di movies per modificare i dati di movies che conterrà i dati importati dalla API
-  const { setMovies } = useAppDataContext();
+  const { setMovies, setSeries } = useAppDataContext();
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -24,6 +24,16 @@ export default function SearchBar() {
         },
       })
       .then((res) => setMovies(res.data.results));
+
+    axios
+      .get("https://api.themoviedb.org/3/search/tv", {
+        params: {
+          api_key: "7344c81775a7dcbca7f849d36ff8791d",
+          language: "it-IT",
+          query: search,
+        },
+      })
+      .then((res) => setSeries(res.data.results));
   };
 
   //restituiamo un form che rappresenta la nostra search bar
