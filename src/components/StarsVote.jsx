@@ -1,5 +1,5 @@
 export default function StarsVote(vote) {
-  let starFields = [];
+  let starFields = [""];
   for (let i = vote; i > 0; i--) {
     starFields.push(<i className="fa-solid fa-star yellowStar" />);
   }
@@ -8,6 +8,12 @@ export default function StarsVote(vote) {
     starFields.push(<i className="fa-solid fa-star greyStar" />);
   }
 
-  console.log(starFields);
-  return <div> {starFields} </div>;
+  //   console.log(starFields);
+  return (
+    <div>
+      {starFields.map((elm, index) => (
+        <span key={index}>{elm}</span>
+      ))}
+    </div>
+  );
 }
