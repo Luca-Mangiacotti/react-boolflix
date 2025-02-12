@@ -1,6 +1,8 @@
 //importazione del context
 import { useAppDataContext } from "./contexts/AppDataContext";
 
+import FlagSniffer from "./FlagSniffer";
+
 export default function Main() {
   //creo una variabile che contiene i dati ricevuti dalla API destrutturandola dal context
   const { movies, series } = useAppDataContext();
@@ -20,7 +22,7 @@ export default function Main() {
                     <p>Lingua: </p>
                     <img
                       className="ico-flags"
-                      src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${movie.original_language.toUpperCase()}.svg`}
+                      src={FlagSniffer(movie)}
                       alt={movie.original_language}
                     />
                   </div>
@@ -43,7 +45,7 @@ export default function Main() {
                     <p>Lingua: </p>
                     <img
                       className="ico-flags"
-                      src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${serie.original_language.toUpperCase()}.svg`}
+                      src={FlagSniffer(serie)}
                       alt={serie.original_language}
                     />
                   </div>
