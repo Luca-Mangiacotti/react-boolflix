@@ -8,11 +8,18 @@ export default function Main() {
   //restituiamo una lista mappando l'array di oggetti che contiene le informazioni ricercate
   return (
     <main>
-      <ul>
+      <ol>
         {movies.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
+          <li key={movie.id}>
+            <div>
+              <h4>Titolo: {movie.title}</h4>
+              <p>Titolo originale: {movie.original_title}</p>
+              <p>Lingua: {movie.original_language}</p>
+              <p>Voto: {Math.trunc(movie.vote_average)}</p>
+            </div>
+          </li>
         ))}
-      </ul>
+      </ol>
     </main>
   );
 }
