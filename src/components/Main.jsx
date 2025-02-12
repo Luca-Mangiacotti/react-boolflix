@@ -2,6 +2,7 @@
 import { useAppDataContext } from "./contexts/AppDataContext";
 
 import FlagSniffer from "./FlagSniffer";
+import StarsVote from "./StarsVote";
 
 export default function Main() {
   //creo una variabile che contiene i dati ricevuti dalla API destrutturandola dal context
@@ -27,7 +28,8 @@ export default function Main() {
                     />
                   </div>
                   <div className="movie-info-field">
-                    <p>Voto: {Math.trunc(movie.vote_average / 2)}</p>
+                    Voto:
+                    <div>{StarsVote(Math.trunc(movie.vote_average / 2))}</div>
                   </div>
                 </div>
               )}
