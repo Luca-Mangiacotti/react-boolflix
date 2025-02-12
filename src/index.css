@@ -1,0 +1,9 @@
+.ico-flags {
+  width: 25px;
+  height: auto;
+  padding-left: 15px;
+}
+.movie-language {
+  display: flex;
+  align-items: center;
+}

@@ -14,7 +14,14 @@ export default function Main() {
             <div>
               <h4>Titolo: {movie.title}</h4>
               <p>Titolo originale: {movie.original_title}</p>
-              <p>Lingua: {movie.original_language}</p>
+              <div className="movie-language">
+                <p>Lingua: </p>
+                <img
+                  className="ico-flags"
+                  src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${movie.original_language.toUpperCase()}.svg`}
+                  alt={movie.original_language}
+                />
+              </div>
               <p>Voto: {Math.trunc(movie.vote_average)}</p>
             </div>
           </li>
