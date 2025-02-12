@@ -11,3 +11,10 @@
 .resultPage {
   display: flex;
 }
+.yellowStar {
+  color: darkgoldenrod;
+}
+
+.greyStar {
+  color: dimgrey;
+}

@@ -52,7 +52,8 @@ export default function Main() {
                     />
                   </div>
                   <div className="movie-info-field">
-                    <p>Voto: {Math.trunc(serie.vote_average / 2)}</p>
+                    Voto:
+                    <div>{StarsVote(Math.trunc(serie.vote_average / 2))}</div>
                   </div>
                 </div>
               )}
