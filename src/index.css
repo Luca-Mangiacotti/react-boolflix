@@ -3,7 +3,11 @@
   height: auto;
   padding-left: 15px;
 }
-.movie-language {
+.movie-info-field {
   display: flex;
   align-items: center;
+}
+
+.resultPage {
+  display: flex;
 }
