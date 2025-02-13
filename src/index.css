@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+ul {
+  position: static;
+  z-index: 1;
+}
+
+#contentCard {
+  display: none;
+  background-color: black;
+  color: white;
+  z-index: 10;
+}
+
+#card:hover #posterCard {
+  display: none;
+}
+
+#card:hover #contentCard {
+  display: block;
+  transform: scale(150%);
+  overflow: visible;
+}
