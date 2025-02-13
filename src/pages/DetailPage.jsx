@@ -18,7 +18,7 @@ export default function DetailPage() {
             <i className="fa-solid fa-arrow-left"></i> indietro
           </button>
         </Link>
-        <h1>Dettaglio contenuto</h1>
+        <h1>Dettagli contenuto</h1>
         <div className=" w-full h-full p-5 md:flex">
           <img
             id="posterFront"
@@ -28,13 +28,9 @@ export default function DetailPage() {
           />
           <div className="p-10 w-full h-fit rounded-lg border-2 border-[#000000] bg-[#43465e]">
             {currentElm.title ? (
-              <h4 className="text-3xl text-[#c1071e]">
-                Titolo Film:{currentElm.title}
-              </h4>
+              <h4 className="text-3xl text-[#c1071e]">{currentElm.title}</h4>
             ) : (
-              <h4 className="text-3xl text-[#c1071e]">
-                Titolo Serie:{currentElm.name}
-              </h4>
+              <h4 className="text-3xl text-[#c1071e]">{currentElm.name}</h4>
             )}
 
             {currentElm.original_title ? (

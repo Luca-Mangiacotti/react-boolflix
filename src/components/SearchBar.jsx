@@ -43,12 +43,16 @@ export default function SearchBar() {
       <input
         name="search"
         type="search"
-        className="bg-gray-100 text-gray-800 w-60"
+        className="bg-gray-100 text-gray-800 w-60 p-1.5 mr-1.5"
         placeholder="Cerca..."
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      <button type="submit" className="pl-2.5 cursor-pointer">
+
+      <button
+        type="submit"
+        className="p-1.5 cursor-pointer bg-[#c1071e] rounded-md border-2 border-[#43465e] hover:bg-[#db0000]"
+      >
         Cerca
       </button>
     </form>

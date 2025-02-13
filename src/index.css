@@ -13,6 +13,11 @@ h1 {
   color: #db0000;
 }
 
+h4 {
+  color: #ffffff;
+  font-size: 20px;
+}
+
 p {
   font-family: "Roboto", serif;
   color: #dedede;

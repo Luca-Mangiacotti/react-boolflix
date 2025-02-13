@@ -21,13 +21,12 @@ export default function Card({ element }) {
         />
         <div
           id="contentCard"
-          className="p-10 w-40 h-96 rounded-lg border-2 border-[#000000] bg-[#43465e]"
+          className="p-10 w-40 h-96 rounded-lg border-2 border-[#000000] bg-top bg-no-repeat bg-cover "
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(http://image.tmdb.org/t/p/w342${element.backdrop_path})`,
+          }}
         >
-          {element.title ? (
-            <h4>Titolo Film:{element.title}</h4>
-          ) : (
-            <h4>Titolo Serie:{element.name}</h4>
-          )}
+          {element.title ? <h4>{element.title}</h4> : <h4>{element.name}</h4>}
 
           {element.original_title ? (
             <p>Titolo originale: {element.original_title}</p>
@@ -48,7 +47,7 @@ export default function Card({ element }) {
           </div>
           <Link to={"/detail"}>
             <button
-              className="cursor-pointer"
+              className="cursor-pointer p-1.5 bg-[#c1071e] rounded-md border-2 border-[#43465e] hover:bg-[#db0000]"
               onClick={() => setCurrentElm(element)}
             >
               visualizza
