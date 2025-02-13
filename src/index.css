@@ -1,15 +1,35 @@
 @import "tailwindcss";
 
-ul {
-  position: static;
-  z-index: 1;
+/* ------------------------
+        TYPO
+-------------------------- */
+
+body {
+  font-family: "Bebas Neue", serif;
 }
+
+h1 {
+  font-size: 30px;
+  color: #db0000;
+}
+
+/* ------------------------
+        COMPONENTS
+-------------------------- */
+
+#Logo {
+  max-width: 200px;
+  height: auto;
+}
+
+/*---------CARD-----------*/
 
 #contentCard {
   display: none;
   background-color: black;
   color: white;
-  z-index: 10;
+  position: relative;
+  z-index: 1;
 }
 
 #card:hover #posterCard {
@@ -18,6 +38,6 @@ ul {
 
 #card:hover #contentCard {
   display: block;
-  transform: scale(150%);
-  overflow: visible;
+  width: 200px;
+  z-index: 10;
 }

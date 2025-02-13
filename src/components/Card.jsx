@@ -11,7 +11,7 @@ export default function Card({ element }) {
           alt={element.title ? element.title : element.name}
           className="h-52"
         />
-        <div id="contentCard">
+        <div id="contentCard" className="p-10 w-40 h-96 rounded-lg">
           {element.title ? (
             <h4>Titolo Film:{element.title}</h4>
           ) : (
