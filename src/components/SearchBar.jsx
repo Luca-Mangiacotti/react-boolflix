@@ -4,12 +4,16 @@ import axios from "axios";
 //importiamo la hook per utilizzare il contesto
 import { useAppDataContext } from "./contexts/AppDataContext";
 
+import { useNavigate } from "react-router-dom";
+
 export default function SearchBar() {
   //creazione di una variabile di stato che conterrà i dati dell'input di ricerca
   const [search, setSearch] = useState("");
 
   //destrutturazione della setter di movies per modificare i dati di movies che conterrà i dati importati dalla API
   const { setMovies, setSeries } = useAppDataContext();
+
+  const navigate = useNavigate();
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -34,6 +38,7 @@ export default function SearchBar() {
         },
       })
       .then((res) => setSeries(res.data.results));
+    navigate("/");
   };
 
   //restituiamo un form che rappresenta la nostra search bar

@@ -12,7 +12,7 @@ export default function DetailPage() {
   return (
     <>
       <Header />
-      <div className="p-2.5 bg-[#0c0c0c]">
+      <div className="p-2.5 bg-[#0c0c0c] m-auto">
         <Link to={"/"}>
           <button className="cursor-pointer bg-[#0c0c0c] text-[#ffffff] p-1.5 rounded-lg border-1 border-[#000000] hover:bg-[#43465e]">
             <i className="fa-solid fa-arrow-left"></i> indietro

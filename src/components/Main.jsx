@@ -10,7 +10,7 @@ export default function Main() {
 
   //restituiamo una lista mappando l'array di oggetti che contiene le informazioni ricercate per i film
   return (
-    <main className="lg py-20 px-10 bg-[#0c0c0c]">
+    <main className="lg py-20 px-10 bg-[#0c0c0c] h-full">
       {movies == "" ? <h1></h1> : <h1>Film</h1>}
       <ul className=" flex items-center overflow-x-auto mb-9 h-100 px-10 overflow-y-clip custom-scrollbar ">
         {movies.map((element) => (
