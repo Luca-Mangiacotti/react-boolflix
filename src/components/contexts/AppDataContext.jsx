@@ -8,6 +8,7 @@ function AppDataProvider({ children }) {
   // definizione della variabile di stato che conterrà le informazioni da condividere
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
+  const [lastSeen, setLastSeen] = useState([]);
   const [currentElm, setCurrentElm] = useState([]);
   return (
     <AppDataContext.Provider
@@ -18,6 +19,8 @@ function AppDataProvider({ children }) {
         setSeries,
         currentElm,
         setCurrentElm,
+        lastSeen,
+        setLastSeen,
       }}
     >
       {children}

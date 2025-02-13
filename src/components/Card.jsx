@@ -6,7 +6,8 @@ import StarsVote from "./StarsVote";
 import { useAppDataContext } from "./contexts/AppDataContext";
 
 export default function Card({ element }) {
-  const { currentElm, setCurrentElm } = useAppDataContext();
+  const { currentElm, setCurrentElm, lastSeen, setLastSeen } =
+    useAppDataContext();
   const handleDetail = () => {
     console.log(currentElm);
   };
@@ -48,7 +49,10 @@ export default function Card({ element }) {
           <Link to={"/detail"}>
             <button
               className="cursor-pointer p-1.5 bg-[#c1071e] rounded-md border-2 border-[#43465e] hover:bg-[#db0000]"
-              onClick={() => setCurrentElm(element)}
+              onClick={() => {
+                setCurrentElm(element);
+                setLastSeen([...lastSeen, element]);
+              }}
             >
               visualizza
             </button>

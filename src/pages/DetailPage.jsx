@@ -8,7 +8,7 @@ import FlagSniffer from "../components/FlagSniffer";
 
 export default function DetailPage() {
   const { currentElm } = useAppDataContext();
-  console.log(currentElm);
+
   return (
     <>
       <Header />
