@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 //import dei componenti
 import FlagSniffer from "./FlagSniffer";
 import StarsVote from "./StarsVote";
+//import del contesto per la SHOW
+import { useAppDataContext } from "./contexts/AppDataContext";
 
 export default function Card({ element }) {
+  const { currentElm, setCurrentElm } = useAppDataContext();
+  const handleDetail = () => {
+    console.log(currentElm);
+  };
   return (
     <li key={element.id} className="py-2">
       <div id="card" className=" w-40">
@@ -41,7 +47,12 @@ export default function Card({ element }) {
             <div>{StarsVote(Math.trunc(element.vote_average / 2))}</div>
           </div>
           <Link to={"/detail"}>
-            <button className="cursor-pointer">visualizza</button>
+            <button
+              className="cursor-pointer"
+              onClick={() => setCurrentElm(element)}
+            >
+              visualizza
+            </button>
           </Link>
         </div>
       </div>
