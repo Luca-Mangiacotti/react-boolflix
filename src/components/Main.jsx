@@ -12,7 +12,7 @@ export default function Main() {
   return (
     <main className="lg py-20 px-10 bg-[#0c0c0c]">
       {movies == "" ? <h1></h1> : <h1>Film</h1>}
-      <ul className=" flex items-center overflow-x-auto mb-9 h-100 px-10  overflow-y-clip ">
+      <ul className=" flex items-center overflow-x-auto mb-9 h-100 px-10 overflow-y-clip custom-scrollbar ">
         {movies.map((element) => (
           <Card key={element.id} element={element} />
         ))}
@@ -22,7 +22,7 @@ export default function Main() {
       ) : (
         <h1 className="mt-30">Serie TV</h1>
       )}
-      <ul className=" flex items-center overflow-x-auto h-100 px-10 mb-9  overflow-y-clip ">
+      <ul className=" flex items-center overflow-x-auto h-100 px-10 mb-9 overflow-y-clip custom-scrollbar ">
         {series.map((element) => (
           <Card key={element.id} element={element} />
         ))}
@@ -32,7 +32,7 @@ export default function Main() {
       ) : (
         <h1 className="mt-30">Ultimi visualizzati</h1>
       )}
-      <ul className=" flex items-center overflow-x-auto h-100 px-10 overflow-y-clip ">
+      <ul className=" flex items-center overflow-x-auto h-100 px-10 overflow-y-clip custom-scrollbar ">
         {lastSeen.map((element) => (
           <Card key={element.id} element={element} />
         ))}
