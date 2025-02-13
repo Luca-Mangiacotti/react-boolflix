@@ -48,7 +48,7 @@ export default function SearchBar() {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      <button type="submit" className="pl-2.5">
+      <button type="submit" className="pl-2.5 cursor-pointer">
         Cerca
       </button>
     </form>

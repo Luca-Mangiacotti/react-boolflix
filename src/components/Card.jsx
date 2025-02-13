@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+//import dei componenti
 import FlagSniffer from "./FlagSniffer";
 import StarsVote from "./StarsVote";
 
@@ -38,6 +40,9 @@ export default function Card({ element }) {
             Voto:
             <div>{StarsVote(Math.trunc(element.vote_average / 2))}</div>
           </div>
+          <Link to={"/detail"}>
+            <button className="cursor-pointer">visualizza</button>
+          </Link>
         </div>
       </div>
     </li>
